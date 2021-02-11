@@ -1,0 +1,138 @@
+@font-face{
+    font-family: "Soulwave";
+    src: local("Soulwave"), url("Fonts/Soulwave.ttf") format("woff");
+}
+
+.landing{
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+.logo_container{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.486);
+    height: 100vh;
+    width: 100%;
+}
+
+.mainlogo{
+    padding-top: 35vh;
+    max-width: 650px;
+}
+
+.nav-item{
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: whitesmoke !important;
+}
+
+.mybutton{
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+}
+
+.page{
+    height: 100vh;  
+}
+
+.bemutatkozas{
+    height: 100vh;
+}
+
+.display-1{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    padding-top: 80px;
+    font-size: 90px !important;
+}
+
+.display-2{
+    font-family: 'Soulwave';
+    padding-left: 165px;
+    margin-top: -42px;
+    font-size: 110px !important;
+}
+
+.lead{
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 0.9px;
+    padding-left: 50px;
+    margin-right: 230px;
+    font-size: 28px !important;
+    line-height: 32px;
+}
+
+.kutyabarat_img_1{
+    max-width: 170vh;
+    margin-bottom: 20px;
+}
+
+.Sir_David{
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+.room_container{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.486);
+    height: 100vh;
+    width: 100%;
+    padding-top: 80px;
+}
+
+.icon_opacity{
+    border-radius: 20%;
+    background-color: rgba(255, 255, 255, 0.301);
+    width: 100px;
+    height: 100px;
+    backdrop-filter: blur(5px);
+}
+
+.icon_opacity img{
+    margin: auto;
+    display: block;
+    padding-top: 20px;
+}
+.bed img{
+    padding-top: 25px;
+}
+
+.wifi img{
+    padding-top: 28px;
+}
+
+.fridge img{
+    padding-top: 15px;
+}
+
+.bathroom img{
+    padding-top: 15px;
+}
+
+.calendar img{
+    padding-top: 25px;
+}
+
+.invisible{
+    display: none;
+}
+
+.singlebed{
+    padding-top: 12px;
+}
+
+.arrow img{
+    padding-top: 200px;
+}
+
+.szobainfo{
+    float: right;
+    margin-top: 70px;
+    border-radius: 0% !important;
+    margin-right: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px !important;
+}
