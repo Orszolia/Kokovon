@@ -122,12 +122,12 @@
                             FOGLALD LE MOST!
                         </button>
 
-                        <button class="szobainfo btn btn-outline-light">
+                        <button class="szobainfo btn btn-outline-light"  data-toggle="modal" data-target=".bg-modal-lg">
                             FEDEZD FEL A SZOBÁT!
                         </button>
 
                         <h1 class="display-1" style="color: white;">Sir David</h1>
-                        <h1 class="display-2" style="color: white;">Apartman</h1>
+                        <h1 class="display-2" style="color: white;">apartman</h1>
 
                         <div class="row">
 
@@ -214,6 +214,81 @@
 
                 </div>
 
+                <!-- Large modal -->
+
+                    <div class="modal fade bg-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            
+                                <div class="container-fluid sirdavid_foglalas" >
+
+                                        <button class="szobainfo btn btn-outline-dark">
+                                            FOGLALD LE MOST!
+                                        </button>
+                                                                                                                                                            
+
+                                        <h1 class="display-3">Sir David</h1>
+                                        <h1 class="display-4">apartman</h1>
+
+                                                <p class="arak">
+                                                    árak
+                                                </p>
+
+
+                                        <div class="row justify-content-center">
+
+                                            <div class="modal_col col-sm-auto">
+
+                                                <img class="sirdavid_photo" src="images/sirdavid_photo1.jpg" alt="" ><br>  
+                                                <img class="sirdavid_photo" src="images/sirdavid_photo2.jpg" alt="" >  
+
+                                            </div>
+
+                                            <div class="modal_col col-sm-auto">
+                                                
+                                                <img class="sirdavid_photo2" src="images/sirdavid_photo3.jpeg" alt="" >  
+
+                                            </div>
+
+                                            <div class="modal_col col-sm-auto">
+
+
+                                                <table class="table table-bordered">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>Főszezon (jún.15.-aug.31.)</td>
+                                                        <td>24 000,- Ft</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Elő-/utószezon (ápr.1.-jún.14., szept.1-okt.31.)</td>
+                                                        <td>20 000,- Ft</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Szezonon kívül (nov.01.-márc.31.)</td>
+                                                        <td>15 000,- Ft</td>
+                                                    </tr>
+                                                    </tbody>
+
+                                                </table>
+
+                                                <p class="aprobetus">
+                                                    Az árváltoztatás jogát fenntartjuk.
+                                                </p>
+
+                                                <p class="aprobetus">
+                                                    Aktuális ajánlatainkért keressetek minket!
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
             </div>
 
 
@@ -226,6 +301,8 @@
 </body>
 
 <script>
+
+
 
     const Room = [
         {
@@ -261,6 +338,167 @@
 
 
 </script>
+
+    <div class= "container">
+        <div class="container page foglalas" >
+
+                <h1 class="display-1">Foglalj</h1>
+                <h1 class="display-2">nálunk!</h1>
+
+            <div class="row">
+
+                <div class="col-4">
+
+                    <span class="calendar">
+
+                    </span>
+
+                </div>
+
+                <div class="col-8">
+                    <form>
+
+                        <div class="row">
+
+                            <div class="col-5" >
+
+                                <div class="form-group">
+                                    <label for="inputEmail">E-mail címed:</label>
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="E-mail">    
+                                </div>
+
+                                
+                                <div class="form-group">
+                                    <label for="inputName">Neved:</label>
+                                    <input type="text" class="form-control" id="inputName" placeholder="Nev">    
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inputRooms">Szobák:</label>
+                                    <input type="text" class="form-control" id="inputRooms" placeholder="">    
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inputMessage">Üzeneted:</label>
+                                    <textarea class="form-control" id="inputMessage" rows="3"></textarea>                                </div>
+
+                            </div>
+
+                            <div class="col-7" >
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <label for="inputAdults">Felnőtt:</label>
+                                        <div class="form-inline">
+                                            <button class="btn btn-light">
+                                                <img class="add" src="images/minus.svg">
+                                            </button>
+                                            <input type="text" class="form-control xs-1" id="inputAdults" style="width: 40px;">
+                                            <button class="btn btn-light">
+                                                <img class="add" src="images/plus.svg">
+                                            </button>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="form-group col">
+                                        <label for="inputChildren">Gyerek:</label>
+                                        <div class="form-inline">
+                                            <button class="btn btn-light">
+                                                <img class="add" src="images/minus.svg">
+                                            </button>
+                                            <input type="text" class="form-control xs-1" id="inputChildren" style="width: 40px;">
+                                            <button class="btn btn-light">
+                                                <img class="add" src="images/plus.svg">
+                                            </button>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col">
+
+                                        <label for="start">Érkezés:</label>
+
+                                        <input type="date" id="start" name="trip-start"
+                                            value="2020-03-01"
+                                            min="2020-01-01" max="2020-12-31">
+
+                                    </div>
+
+                                    <div class="form-group col">
+
+                                        <label for="start">Távozás:</label>
+
+                                        <input type="date" id="end" name="trip-end"
+                                            value="2020-03-01"
+                                            min="2020-01-01" max="2020-12-31">
+
+                                    </div>
+
+                                </div>
+
+                                <p class="hiba hide">
+                                    Ebben az időszakban a minimális foglalás 2 éjszaka.
+                                </p>
+
+                                <h5 class="extrak:">
+                                    Extrák
+                                </h5>
+
+                                <div class="row">
+                                    <div class="col">
+
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                            <label class="form-check-label" for="inlineCheckbox1">Biciklik</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                            <label class="form-check-label" for="inlineCheckbox1">Dézsa</label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                            <label class="form-check-label" for="inlineCheckbox1">Babaágy</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                            <label class="form-check-label" for="inlineCheckbox1">Grill</label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <button type="button kuldes" class="btn btn-dark mt-5 btn-lg">Küldés</button>
+
+                            </div>
+
+                            
+                    </form>
+
+                   
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

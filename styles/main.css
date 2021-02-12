@@ -136,3 +136,86 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 20px !important;
 }
+
+.foglalas{
+    margin-top: 50px;
+    float: right;
+}
+
+.modal .modal-dialog{
+    width: 90% !important;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: none;
+    margin-top: 20px;
+    position: relative;
+    padding: 0px;
+    height: 100%;
+}
+
+.modal_col{
+    padding: 15px !important;
+}
+
+.sirdavid_photo{
+    height: 200px;
+    margin-bottom: 25px;
+}
+
+.sirdavid_photo2{
+    height: 425px;
+}
+
+.display-3{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    padding-top: 30px;
+    font-size: 70px !important;
+}
+
+.display-4{
+    font-family: 'Soulwave';
+    padding-left: 165px;
+    margin-top: -50px;
+    font-size: 90px !important;
+}
+
+.arak{
+    font-family: 'Soulwave';
+    font-size: 50px;
+    float: right;
+    position: absolute;
+    top:155px;
+    right:18px;
+}
+
+.table{
+    margin: 0px !important;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+}
+
+.aprobetus{
+    font-size: 13px;
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 3px;
+    margin-top: 8px;
+}
+.add{
+    padding: 0px;
+    margin:0px;
+    max-width: 15px;
+}
+
+.hiba{
+    color: red;
+    font-size: 13px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    margin-top: -8px;
+}
+
+.hide{
+    display:none;
+}
+
