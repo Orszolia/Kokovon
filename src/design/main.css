@@ -1,6 +1,6 @@
 @font-face{
     font-family: "Soulwave";
-    src: local("Soulwave"), url("Fonts/Soulwave.ttf") format("woff");
+    src: local("Soulwave"), url("../assets/Fonts/Soulwave.ttf") format("woff");
 }
 
 .landing{
@@ -116,7 +116,7 @@
     padding-top: 25px;
 }
 
-.invisible{
+.hidden{
     display: none;
 }
 
