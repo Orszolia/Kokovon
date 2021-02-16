@@ -5,6 +5,7 @@
 
     <Vendeghaz />
     <Apartmanok />
+    <Foglalas />
   </div>
 </template>
 
@@ -13,10 +14,11 @@ import NavBar from "@/components/nav-bar";
 import Landing from "@/components/landing";
 import Vendeghaz from "@/views/vendeghaz";
 import Apartmanok from "@/views/apartmanok";
+import Foglalas from "@/views/foglalas";
 
 export default {
   name: "App",
-  components: { NavBar, Landing, Vendeghaz, Apartmanok },
+  components: { NavBar, Landing, Vendeghaz, Apartmanok, Foglalas },
 };
 </script>
 
