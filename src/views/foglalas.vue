@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="container page foglalas">
+    <div class="container foglalas">
       <h1 class="display-1">Foglalj</h1>
       <h1 class="display-2">nálunk!</h1>
 
