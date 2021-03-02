@@ -192,40 +192,17 @@
                   </div>
                 </div>
 
-                <div class="form-row">
-                  <div class="form-group col">
-                    <label for="start">Érkezés:</label>
-                    <datepicker
-                      id="start_input"
-                      v-model="arrival"
-                      :language="hu"
-                      :monday-first="true"
-                      :format="formatDate"
-                      :full-month-name="true"
-                      :disabled-dates="state.disabledDates"
-                      style="width: 100px"
-                    ></datepicker>
-                  </div>
-
-                  <div class="form-group col">
-                    <label for="start">Távozás:</label>
-
-                    <datepicker
-                      id="end_input"
-                      v-model="leave"
-                      :language="hu"
-                      :monday-first="true"
-                      :format="formatDate"
-                      :full-month-name="true"
-                      :disabled-dates="state.disabledDates"
-                      :orientation="left"
-                    ></datepicker>
-                  </div>
+                <div class="form-group">
+                  <label for="start">Érkezés:</label><br />
+                  <span id="start_input" class="date_input">{{ arrival }}</span>
                 </div>
 
-                <p class="hiba hide">
-                  Ebben az időszakban a minimális foglalás 2 éjszaka.
-                </p>
+                <div class="form-group">
+                  <label for="start">Távozás:</label><br />
+                  <span id="end_input" class="date_input">{{ leave }}</span>
+                </div>
+
+                <Hiba :arrival="arrival" :leave="leave" />
 
                 <div class="form-group">
                   <label for="inputName">Neved:</label>
@@ -366,20 +343,13 @@
 </template>
 
 <script>
-var state = {
-  disabledDates: {
-    to: new Date(),
-  },
-};
-
 import Calendar from "../components/calendar";
-import Datepicker from "vuejs-datepicker";
-import { hu } from "vuejs-datepicker/dist/locale";
 import moment from "moment";
+import Hiba from "../components/hiba-uzenetek";
 
 export default {
   name: "Foglalas",
-  components: { Calendar, Datepicker },
+  components: { Calendar, Hiba },
 
   data() {
     return {
@@ -392,10 +362,8 @@ export default {
       arrival: undefined,
       leave: undefined,
       extra: [],
-      hu: hu,
       selectedCalendarRoom: undefined,
       hide: false,
-      state: state,
     };
   },
   created() {
@@ -404,12 +372,21 @@ export default {
   methods: {
     getNextDays() {
       var today = new Date();
-      var tomorrow = new Date(today);
-      tomorrow.setDate(tomorrow.getDate() + 1);
-      var after_tomorrow = new Date(today);
-      after_tomorrow.setDate(after_tomorrow.getDate() + 2);
-      this.arrival = tomorrow;
-      this.leave = after_tomorrow;
+      var firstDate = new Date(today);
+      firstDate.setDate(firstDate.getDate() + 1);
+      var d = firstDate.getDate();
+      if (d < 10) {
+        d = "0" + d;
+      }
+      var m = firstDate.getMonth() + 1;
+      if (m < 10) {
+        m = "0" + m;
+      }
+      var y = firstDate.getFullYear();
+      firstDate = y + "-" + m + "-" + d;
+
+      this.arrival = firstDate;
+      this.leave = firstDate;
     },
     formatDate(date) {
       return moment(date).format("YYYY-MM-DD");
@@ -457,5 +434,13 @@ export default {
   margin-left: 5px;
   font-size: 14px;
   padding: 0px 8px;
+}
+
+.date_input {
+  border: solid;
+  border-width: 1px;
+  border-color: rgba(128, 128, 128, 0.527);
+  padding: 5px 40px;
+  border-radius: 5%;
 }
 </style>
