@@ -125,7 +125,7 @@ const Rooms = [
     id: 3,
     roomName: "Herr Mayer",
     background: {
-      backgroundImage: `url(${require("../assets/images/herrmayer_bg.jpg")})`,
+      backgroundImage: `url(${require("../assets/images/apartman_herrmayer.jpg")})`,
     },
     roomType: "apartman",
     roomIcons: ["bed", "singlebed", "fridge", "bathroom", "calendar"],
@@ -134,7 +134,7 @@ const Rooms = [
     id: 4,
     roomName: "Deluxe",
     background: {
-      backgroundImage: `url(${require("../assets/images/herrmayer_bg.jpg")})`,
+      backgroundImage: `url(${require("../assets/images/apartman_herrmayer.jpg")})`,
     },
     roomType: "sátor",
     roomIcons: ["bed", "singlebed", "bathroom", "calendar"],
