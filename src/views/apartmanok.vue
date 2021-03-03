@@ -107,7 +107,7 @@ const Rooms = [
     id: 1,
     roomName: "Sir David",
     background: {
-      backgroundImage: `url(${require("../assets/images/sirdavid_background.jpg")})`,
+      backgroundImage: `url(${require("../assets/images/apartman_sirdavid.jpg")})`,
     },
     roomType: "apartman",
     roomIcons: ["bed", "wifi", "fridge", "bathroom", "calendar"],
@@ -116,7 +116,7 @@ const Rooms = [
     id: 2,
     roomName: "Maui",
     background: {
-      backgroundImage: `url(${require("../assets/images/maui_bg.jpg")})`,
+      backgroundImage: `url(${require("../assets/images/apartman_maui.jpg")})`,
     },
     roomType: "apartman",
     roomIcons: ["bed", "wifi", "fridge", "bathroom", "ac"],
@@ -153,7 +153,7 @@ export default {
         id: 1,
         roomName: "Sir David",
         background: {
-          backgroundImage: `url(${require("../assets/images/sirdavid_background.jpg")})`,
+          backgroundImage: `url(${require("../assets/images/apartman_sirdavid.jpg")})`,
         },
         roomType: "apartman",
         roomIcons: ["bed", "wifi", "fridge", "bathroom", "calendar"],

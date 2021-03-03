@@ -45,14 +45,14 @@
     font-family: 'Cormorant Garamond', serif;
     font-weight: bold;
     padding-top: 80px;
-    font-size: 90px !important;
+    font-size: 70px !important;
 }
 
 .display-2{
     font-family: 'Soulwave';
     padding-left: 165px;
     margin-top: -42px;
-    font-size: 110px !important;
+    font-size: 90px !important;
 }
 
 .lead{
@@ -146,7 +146,7 @@
 
 }
 
-.modal .modal-dialog{
+.modal .modal-dialog-apartman{
     width: 90% !important;
     margin-left: auto;
     margin-right: auto;
@@ -217,4 +217,77 @@
     font-family: 'Cormorant Garamond', serif;
     font-weight: bold;
     margin-top: -8px;
+}
+
+
+.extra_img img{
+    width: 240px;
+    margin: 10px;
+    transition: 0.15s ease-in;
+}
+
+.extra_img img:hover{
+    transform: scale(1.1);
+    transition: 0.2s ease-in;
+}
+
+.modal-header{
+    font: 'Cormorant Garamond', serif !important;
+}
+
+.display-5{
+    font-family: 'Soulwave';
+    font-size: 50px !important;
+    margin-bottom: -20px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.display-6{
+    margin: 25px;
+}
+
+.galeria{
+    margin: -80px;
+}
+
+.road1{
+    margin-left: 200px;
+    margin-top: -10px;
+}
+
+.house{
+    margin-top: -90px;
+    transition: 0.15s ease-in;
+}
+
+.house:hover{
+    transform: scale(1.2);
+    transition: 0.2s ease-in;
+}
+
+.lake{
+    margin-left: 100px;
+    padding-top: 50px;
+    transition: 0.15s ease-in;
+}
+
+.lake:hover{
+    transform: scale(1.2);
+    transition: 0.2s ease-in;
+}
+
+.pajta{
+    margin-top: -100px;
+    transition: 0.15s ease-in;
+}
+
+.pajta:hover{
+    transform: scale(1.2);
+    transition: 0.2s ease-in;
+}
+
+.road2{
+    padding-top: 70px;
+    margin-left: -70px;
 }

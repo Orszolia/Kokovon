@@ -6,7 +6,7 @@
     aria-labelledby="myLargeModalLabel"
     aria-hidden="true"
   >
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-apartman">
       <div class="modal-content">
         <div class="container-fluid sirdavid_foglalas">
           <button class="szobainfo btn btn-outline-dark">
