@@ -9,6 +9,7 @@
           <Calendar
             @get_arrival_date="get_arrival_date"
             @get_leave_date="get_leave_date"
+            @get_selected_dates="get_selected_dates"
             :room="selectedCalendarRoom"
             :hide="hide"
           />
@@ -194,16 +195,44 @@
 
                 <div class="form-group">
                   <label for="start">Érkezés:</label><br />
-                  <span id="start_input" class="date_input">{{ arrival }}</span>
+                  <span
+                    id="start_input"
+                    class="date_input"
+                    v-if="arrival == undefined"
+                    >Válassz egy dátumot</span
+                  >
+                  <span
+                    id="start_input"
+                    class="date_input"
+                    v-if="arrival != undefined"
+                    >{{ arrival }}</span
+                  >
                 </div>
 
                 <div class="form-group">
                   <label for="start">Távozás:</label><br />
-                  <span id="end_input" class="date_input">{{ leave }}</span>
+                  <span
+                    id="end_input"
+                    class="date_input"
+                    v-if="leave == undefined"
+                    >Válassz egy dátumot</span
+                  >
+                  <span
+                    id="end_input"
+                    class="date_input"
+                    v-if="leave != undefined"
+                    >{{ leave }}</span
+                  >
                 </div>
 
-                <Hiba :arrival="arrival" :leave="leave" />
+                <Uzenetek
+                  :arrival="arrival"
+                  :leave="leave"
+                  :selected_dates="selected_dates"
+                />
+              </div>
 
+              <div class="col-6">
                 <div class="form-group">
                   <label for="inputName">Neved:</label>
                   <input
@@ -215,9 +244,6 @@
                     required
                   />
                 </div>
-              </div>
-
-              <div class="col-6">
                 <div class="form-group">
                   <label for="inputEmail">E-mail címed:</label>
                   <input
@@ -345,11 +371,11 @@
 <script>
 import Calendar from "../components/calendar";
 import moment from "moment";
-import Hiba from "../components/hiba-uzenetek";
+import Uzenetek from "../components/messages";
 
 export default {
   name: "Foglalas",
-  components: { Calendar, Hiba },
+  components: { Calendar, Uzenetek },
 
   data() {
     return {
@@ -364,10 +390,11 @@ export default {
       extra: [],
       selectedCalendarRoom: undefined,
       hide: false,
+      selected_dates: [],
     };
   },
   created() {
-    this.getNextDays();
+    // this.getNextDays();
   },
   methods: {
     getNextDays() {
@@ -396,6 +423,9 @@ export default {
     },
     get_leave_date(date) {
       this.leave = date;
+    },
+    get_selected_dates(dates) {
+      this.selected_dates = dates;
     },
     removeData(hide, room) {
       this.selectedCalendarRoom = room;

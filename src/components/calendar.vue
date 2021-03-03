@@ -1,5 +1,5 @@
-<template>
-  <div class="main_div">
+<template >
+  <div class="main_div" id="fullcalendar">
     <div class="calendar_div" id="calendar">
       <FullCalendar :options="calendarOptions" />
     </div>
@@ -41,8 +41,8 @@ export default {
   },
   data() {
     return {
-      date_start: "",
-      date_end: "",
+      date_start: undefined,
+      date_end: undefined,
       selected_dates: [],
       calendarOptions: {
         plugins: [dayGridPlugin, interactionPlugin, googleCalendarPlugin],
@@ -56,6 +56,18 @@ export default {
         eventOverlap: true,
         eventSources: calendars,
         eventsSet: this.handleChange,
+        buttonText: {
+          today: "ma",
+        },
+        customButtons: {
+          clearDatesButton: {
+            text: "Dátumok törlése",
+            click: () => this.clearDates(),
+          },
+        },
+        footerToolbar: {
+          left: "clearDatesButton",
+        },
       },
     };
   },
@@ -95,8 +107,7 @@ export default {
     },
     handleDateClick: function (arg) {
       if (arg.dayEl.classList.contains("fc-day-future")) {
-        console.log(arg);
-        if (this.date_start === "") {
+        if (this.date_start == undefined) {
           arg.dayEl.classList.add("selected_dates");
           this.date_start = new Date(arg.dateStr);
           document.getElementById("start_input").value = arg.dateStr;
@@ -110,14 +121,17 @@ export default {
             this.clearSelectedDates();
             arg.dayEl.classList.add("selected_dates");
             this.date_start = this.date_end;
-            this.date_end = "";
-            document.getElementById("start_input").value = this.date_start;
-            this.$emit("get_arrival_date", this.date_start);
+            this.date_end = undefined;
+            document.getElementById("start_input").value = arg.dateStr;
+            this.$emit("get_arrival_date", arg.dateStr);
+            this.$emit("get_leave_date", undefined);
             return this.date_start, this.date_end;
           } else if (this.date_end.getTime() === this.date_start.getTime()) {
-            this.date_start = "";
-            this.date_end = "";
+            this.date_start = undefined;
+            this.date_end = undefined;
             this.clearSelectedDates();
+            this.$emit("get_arrival_date", undefined);
+            this.$emit("get_leave_date", undefined);
             return this.date_start, this.date_end;
           } else {
             this.clearSelectedDates();
@@ -133,6 +147,7 @@ export default {
         element.classList.remove("selected_dates");
       });
       this.selected_dates = [];
+      return this.selected_dates;
     },
     findSelectedDates(start, end) {
       this.selected_dates = [];
@@ -157,6 +172,7 @@ export default {
         });
       });
       this.date_start = new Date(this.selected_dates[0]);
+      this.$emit("get_selected_dates", this.selected_dates);
       return this.selected_dates;
     },
     handleChange: function () {
@@ -167,6 +183,14 @@ export default {
           }
         });
       });
+    },
+    clearDates() {
+      this.date_start = undefined;
+      this.date_end = undefined;
+      this.clearSelectedDates();
+      this.$emit("get_arrival_date", undefined);
+      this.$emit("get_leave_date", undefined);
+      return this.date_start, this.date_end;
     },
   },
 };
