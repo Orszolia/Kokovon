@@ -13,7 +13,7 @@
       <div class="dog_images">
         <img
           class="kutyabarat_img_1"
-          src="../assets/images/kutyabarat_img_1.png"
+          src="../assets/images/kutyabarat/kutyabarat_img_1.png"
           style="width: 100%"
         />
       </div>

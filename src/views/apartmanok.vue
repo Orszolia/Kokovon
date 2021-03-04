@@ -33,7 +33,7 @@
               <div class="row">
                 <div class="col" v-if="selectedRoom.roomIcons.includes('bed')">
                   <div class="icon_opacity bed">
-                    <img src="../assets/images/bed.png" />
+                    <img src="../assets/images/icons/bed.png" />
                   </div>
                 </div>
 
@@ -42,13 +42,13 @@
                   v-if="selectedRoom.roomIcons.includes('singlebed')"
                 >
                   <div class="icon_opacity singlebed">
-                    <img src="../assets/images/singlebed.svg" />
+                    <img src="../assets/images/icons/singlebed.svg" />
                   </div>
                 </div>
 
                 <div class="col" v-if="selectedRoom.roomIcons.includes('wifi')">
                   <div class="icon_opacity wifi">
-                    <img src="../assets/images/wifi.svg" />
+                    <img src="../assets/images/icons/wifi.svg" />
                   </div>
                 </div>
 
@@ -57,13 +57,13 @@
                   v-if="selectedRoom.roomIcons.includes('fridge')"
                 >
                   <div class="icon_opacity fridge">
-                    <img src="../assets/images/fridge.svg" />
+                    <img src="../assets/images/icons/fridge.svg" />
                   </div>
                 </div>
 
                 <div class="col" v-if="selectedRoom.roomIcons.includes('ac')">
                   <div class="icon_opacity ac">
-                    <img src="../assets/images/ac.svg" />
+                    <img src="../assets/images/icons/ac.svg" />
                   </div>
                 </div>
 
@@ -72,7 +72,7 @@
                   v-if="selectedRoom.roomIcons.includes('bathroom')"
                 >
                   <div class="icon_opacity bathroom">
-                    <img src="../assets/images/bathroom.svg" />
+                    <img src="../assets/images/icons/bathroom.svg" />
                   </div>
                 </div>
 
@@ -81,7 +81,7 @@
                   v-if="selectedRoom.roomIcons.includes('calendar')"
                 >
                   <div class="icon_opacity calendar">
-                    <img src="../assets/images/calendar.svg" />
+                    <img src="../assets/images/icons/calendar.svg" />
                   </div>
                 </div>
               </div>
@@ -89,7 +89,7 @@
 
             <div class="col-1 arrow">
               <button class="btn" @click="nextRoom()">
-                <img src="../assets/images/arrow1.svg" />
+                <img src="../assets/images/icons/arrow1.svg" />
               </button>
             </div>
           </div>
@@ -107,7 +107,7 @@ const Rooms = [
     id: 1,
     roomName: "Sir David",
     background: {
-      backgroundImage: `url(${require("../assets/images/apartman_sirdavid.jpg")})`,
+      backgroundImage: `url(${require("../assets/images/apartmanok/apartman_sirdavid.jpg")})`,
     },
     roomType: "apartman",
     roomIcons: ["bed", "wifi", "fridge", "bathroom", "calendar"],
@@ -116,7 +116,7 @@ const Rooms = [
     id: 2,
     roomName: "Maui",
     background: {
-      backgroundImage: `url(${require("../assets/images/apartman_maui.jpg")})`,
+      backgroundImage: `url(${require("../assets/images/apartmanok/apartman_maui.jpg")})`,
     },
     roomType: "apartman",
     roomIcons: ["bed", "wifi", "fridge", "bathroom", "ac"],
@@ -125,7 +125,7 @@ const Rooms = [
     id: 3,
     roomName: "Herr Mayer",
     background: {
-      backgroundImage: `url(${require("../assets/images/apartman_herrmayer.jpg")})`,
+      backgroundImage: `url(${require("../assets/images/apartmanok/apartman_herrmayer.jpg")})`,
     },
     roomType: "apartman",
     roomIcons: ["bed", "singlebed", "fridge", "bathroom", "calendar"],
@@ -134,7 +134,7 @@ const Rooms = [
     id: 4,
     roomName: "Deluxe",
     background: {
-      backgroundImage: `url(${require("../assets/images/apartman_herrmayer.jpg")})`,
+      backgroundImage: `url(${require("../assets/images/apartmanok/apartman_herrmayer.jpg")})`,
     },
     roomType: "sátor",
     roomIcons: ["bed", "singlebed", "bathroom", "calendar"],
@@ -153,7 +153,7 @@ export default {
         id: 1,
         roomName: "Sir David",
         background: {
-          backgroundImage: `url(${require("../assets/images/apartman_sirdavid.jpg")})`,
+          backgroundImage: `url(${require("../assets/images/apartmanok/apartman_sirdavid.jpg")})`,
         },
         roomType: "apartman",
         roomIcons: ["bed", "wifi", "fridge", "bathroom", "calendar"],

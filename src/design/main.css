@@ -3,6 +3,8 @@
     src: local("Soulwave"), url("../assets/Fonts/Soulwave.ttf") format("woff");
 }
 
+/* Landing page */
+
 .landing{
     height: 100vh;
     background-size: cover;
@@ -33,6 +35,8 @@
     text-transform: uppercase;
 }
 
+/* Kutyabarat vendeghaz bemutatkozas */
+
 .page{
     height: 100vh;  
 }
@@ -55,6 +59,11 @@
     font-size: 90px !important;
 }
 
+.kutyabarat_img_1{
+    max-width: 170vh;
+    margin-bottom: 20px;
+}
+
 .lead{
     font-family: 'Cormorant Garamond', serif;
     letter-spacing: 0.9px;
@@ -64,10 +73,7 @@
     line-height: 32px;
 }
 
-.kutyabarat_img_1{
-    max-width: 170vh;
-    margin-bottom: 20px;
-}
+/* Apartmanok */
 
 .Sir_David{
     height: 100vh;
@@ -147,6 +153,8 @@
 
 }
 
+/* Modal apartmanok */
+
 .modal .modal-dialog-apartman{
     width: 90% !important;
     margin-left: auto;
@@ -212,6 +220,8 @@
     max-width: 15px;
 }
 
+/* Foglalas */
+
 .hiba{
     color: red;
     font-size: 13px;
@@ -220,6 +230,7 @@
     margin-top: -8px;
 }
 
+/* Extrak */
 
 .extra_img img{
     width: 240px;
@@ -231,6 +242,8 @@
     transform: scale(1.1);
     transition: 0.2s ease-in;
 }
+
+/* Extrak modal */
 
 .modal-header{
     font: 'Cormorant Garamond', serif !important;
@@ -247,6 +260,8 @@
 .display-6{
     margin: 25px;
 }
+
+/* Galeria */
 
 .galeria{
     margin: -80px;
@@ -299,7 +314,8 @@
     padding: 0 4px;
   }
   
-  /* Create four equal columns that sits next to each other */
+  /* Galeria modal */
+
   .column {
     flex: 33%;
     max-width: 33%;
@@ -312,15 +328,13 @@
     width: 100%;
   }
   
-  /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
     .column {
       flex: 50%;
       max-width: 50%;
     }
   }
-  
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
   @media screen and (max-width: 600px) {
     .column {
       flex: 100%;
