@@ -229,6 +229,8 @@
                   :arrival="arrival"
                   :leave="leave"
                   :selected_dates="selected_dates"
+                  :selected_rooms="rooms"
+                  :adults="adults"
                 />
               </div>
 
@@ -272,7 +274,7 @@
                     </div>
                   </div>
                   <div class="form-group col">
-                    <label for="inputChildren">Gyerek:</label>
+                    <label for="inputChildren">Gyerek (0-3 év):</label>
                     <div class="form-inline">
                       <input
                         type="number"

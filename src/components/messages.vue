@@ -3,6 +3,10 @@
     <p class="hiba" v-if="thisSeason.min_nights > night_number">
       Ebben az időszakban a minimális foglalás két éjszaka.
     </p>
+    <div>
+      <label for="iranyar">Ár:</label><br />
+      <span class="iranyar">{{ final_price }} ,-Ft</span>
+    </div>
   </div>
 </template>
 
@@ -13,27 +17,27 @@ const seasons = [
     from: "01-01",
     to: "03-31",
     extra_price: 0,
-    min_nights: 1,
+    min_nights: 2,
   },
   {
     name: "Előszezon",
     from: "04-01",
-    to: "07-14",
-    extra_price: 5000,
+    to: "06-14",
+    extra_price: 0,
     min_nights: 2,
   },
   {
     name: "Főszezon",
-    from: "07-15",
+    from: "06-15",
     to: "08-31",
-    extra_price: 9000,
-    min_nights: 2,
+    extra_price: 2000,
+    min_nights: 3,
   },
   {
     name: "Utószezon",
     from: "09-01",
     to: "10-31",
-    extra_price: 5000,
+    extra_price: 0,
     min_nights: 2,
   },
   {
@@ -41,7 +45,32 @@ const seasons = [
     from: "11-01",
     to: "12-31",
     extra_price: 0,
-    min_nights: 1,
+    min_nights: 2,
+  },
+];
+
+const room_prices = [
+  {
+    name: "Maui apartman",
+    capacity: 2,
+    price: 22000,
+  },
+  {
+    name: "Sir David apartman",
+    capacity: 2,
+    price: 22000,
+  },
+  {
+    name: "Herr Mayer apartman",
+    capacity: 4,
+    price: 22000,
+    extra_guests: 5000,
+  },
+  {
+    name: "Deluxe sátor",
+    capacity: 4,
+    price: 15000,
+    extra_guests: 5000,
   },
 ];
 
@@ -56,12 +85,17 @@ export default {
         min_nights: undefined,
       },
       night_number: undefined,
+      rooms: undefined,
+      adults_number: 1,
+      final_price: 0,
     };
   },
   created() {},
   props: {
     arrival: String,
     selected_dates: undefined,
+    selected_rooms: undefined,
+    adults: undefined,
   },
   watch: {
     arrival: function (arrival) {
@@ -69,6 +103,14 @@ export default {
     },
     selected_dates: function (selected_dates) {
       this.night_number = selected_dates.length - 1;
+    },
+    selected_rooms: function (selected_rooms) {
+      this.rooms = selected_rooms;
+      this.calculatePrice(this.rooms, this.adults_number);
+    },
+    adults: function (adults) {
+      this.adults_number = parseInt(adults);
+      this.calculatePrice(this.rooms, this.adults_number);
     },
   },
   methods: {
@@ -87,6 +129,30 @@ export default {
         }
       });
     },
+    calculatePrice(rooms, adults) {
+      var temp = [];
+      room_prices.forEach((price) => {
+        if (rooms.includes(price["name"])) {
+          while (adults > 0 && price["capacity" > 0]) {
+            temp.push(adults * price["price"]);
+            adults = adults - 1;
+            console.log(price["capacity"]);
+            price["capacity"] = price["capacity"] - 1;
+          }
+        }
+      });
+      console.log(temp);
+    },
   },
 };
 </script>
+
+<style>
+.iranyar {
+  border: solid;
+  border-width: 1px;
+  border-color: rgba(128, 128, 128, 0.527);
+  padding: 5px 40px;
+  border-radius: 5%;
+}
+</style>
