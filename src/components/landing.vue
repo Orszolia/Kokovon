@@ -2,11 +2,11 @@
   <div
     class="landing"
     :style="{
-      'background-image': `url(${require('../assets/images/landing_background.jpg')})`,
+      'background-image': `url(${require('../assets/images/landing/landing_background.jpg')})`,
     }"
   >
     <div class="logo_container text-center">
-      <img class="mainlogo" src="../assets/images/logo_house.png" alt="logo" />
+      <img class="mainlogo" src="../assets/images/landing/logo_house.png" alt="logo" />
     </div>
   </div>
 </template>

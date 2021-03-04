@@ -24,12 +24,12 @@
             <div class="modal_col col-sm-auto">
               <img
                 class="sirdavid_photo"
-                src="../assets/images/sirdavid_photo1.jpg"
+                src="../assets/images/modal/sirdavid_photo1.jpg"
                 alt=""
               /><br />
               <img
                 class="sirdavid_photo"
-                src="../assets/images/sirdavid_photo2.jpg"
+                src="../assets/images/modal/sirdavid_photo2.jpg"
                 alt=""
               />
             </div>
@@ -37,7 +37,7 @@
             <div class="modal_col col-sm-auto">
               <img
                 class="sirdavid_photo2"
-                src="../assets/images/sirdavid_photo3.jpeg"
+                src="../assets/images/modal/sirdavid_photo3.jpeg"
                 alt=""
               />
             </div>
