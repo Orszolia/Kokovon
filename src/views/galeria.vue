@@ -8,7 +8,7 @@
             <div class="row">
 
                 <div class="col">
-                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModalLong">
+                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModalLongHouse">
                     <img 
                     class="galeria house"
                     src="../assets/images/galeria_page/galeria_house.png" style="width: 450px;">
@@ -16,25 +16,29 @@
                 </div>
                 
                 <div class="col">
+                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModalLongLake">
                     <img 
                     class="galeria lake"
                     src="../assets/images/galeria_page/galeria_lake.png" style="width: 450px;">
+                    </button>
                 </div>
 
             </div>
 
             <div class="row">
 
-                <div class="col">                    
+                <div class="col"> 
                     <img 
                     class="galeria road1"
                     src="../assets/images/galeria_page/road_1.png" style="width: 160px;">
                 </div>
                 
                 <div class="col">
+                     <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModalLongPajta">                   
                     <img 
                     class="galeria pajta"
-                    src="../assets/images/galeria_page/galeria_pajta.png" style="width: 450px;">
+                    src="../assets/images/galeria_page/galeria_pajta.png" style="width: 400px;">
+                     </button>
                 </div>
 
                 <div class="col">
@@ -48,14 +52,14 @@
 
         </div>
 
-        <!-- Button trigger modal -->
+        <!-- Modal haz es terasz -->
 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal fade" id="exampleModalLongHouse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog-apartman" role="document"> 
                 <div class="modal-content" >
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Ház és terasz</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
@@ -79,22 +83,6 @@
                             <img src="../assets/images/galeria/maui4.jpg">
                             <img src="../assets/images/galeria/house3.jpg">
                             <img src="../assets/images/galeria/garden5.jpeg">
-                            <img src="../assets/images/galeria/garden12.jpeg">
-                            <img src="../assets/images/galeria/garden17.jpeg">
-                            <img src="../assets/images/galeria/garden18.jpeg">
-                            <img src="../assets/images/galeria/garden20.jpeg">
-                            <img src="../assets/images/galeria/garden22.jpg">
-                            <img src="../assets/images/galeria/garden25.jpeg">
-                            <img src="../assets/images/galeria/dezsa1.jpg">
-                            <img src="../assets/images/galeria/lake5.jpeg">
-                            <img src="../assets/images/galeria/lake8.jpeg">
-                            <img src="../assets/images/galeria/garden26.jpg">
-                            <img src="../assets/images/galeria/party1.jpeg">
-                            <img src="../assets/images/galeria/party4.jpeg">
-                            <img src="../assets/images/galeria/party6.jpeg">
-                            <img src="../assets/images/galeria/party12.jpeg">
-                            <img src="../assets/images/galeria/party11.jpeg">
-                            <img src="../assets/images/galeria/party18.jpeg">
                         </div>
 
                         <div class="column galeria2">
@@ -111,21 +99,6 @@
                             <img src="../assets/images/galeria/maui2.jpg">
                             <img src="../assets/images/galeria/maui6.jpg">
                             <img src="../assets/images/galeria/garden9.jpeg">
-                            <img src="../assets/images/galeria/garden6.jpeg">
-                            <img src="../assets/images/galeria/garden10.jpeg">
-                            <img src="../assets/images/galeria/garden13.jpeg">
-                            <img src="../assets/images/galeria/garden16.jpeg">
-                            <img src="../assets/images/galeria/garden21.jpg">
-                            <img src="../assets/images/galeria/garden23.jpeg">
-                            <img src="../assets/images/galeria/dezsa2.jpg">
-                            <img src="../assets/images/galeria/lake8.jpg">
-                            <img src="../assets/images/galeria/lake7.jpeg">
-                            <img src="../assets/images/galeria/party2.jpeg">
-                            <img src="../assets/images/galeria/party7.jpeg">
-                            <img src="../assets/images/galeria/party13.jpeg">
-                            <img src="../assets/images/galeria/party15.jpeg">
-                            <img src="../assets/images/galeria/party9.jpeg">
-                            <img src="../assets/images/galeria/party14.jpeg">
                         </div>
 
                         <div class="column galeria3">
@@ -141,20 +114,114 @@
                             <img src="../assets/images/galeria/maui3.jpg">
                             <img src="../assets/images/galeria/maui7.jpg">
                             <img src="../assets/images/galeria/garden7.jpeg">
+                        </div>
+
+                    </div>
+                </div>
+
+                </div>
+            </div>
+            </div>
+
+        <!-- Modal pajta es grill -->
+
+          <!-- Modal -->
+            <div class="modal fade" id="exampleModalLongPajta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog-apartman" role="document"> 
+                <div class="modal-content" >
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Pajta és grill</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" >
+
+                    <div class="row_galeria">
+
+                        <div class="column galeria1">
+                            <img src="../assets/images/galeria/garden5.jpeg">
+                            <img src="../assets/images/galeria/garden12.jpeg">
+                            <img src="../assets/images/galeria/garden17.jpeg">
+                            <img src="../assets/images/galeria/garden18.jpeg">
+                            <img src="../assets/images/galeria/garden20.jpeg">
+                            <img src="../assets/images/galeria/garden22.jpg">
+                            <img src="../assets/images/galeria/garden25.jpeg">
+                        </div>
+
+                        <div class="column galeria2">
+                            <img src="../assets/images/galeria/garden9.jpeg">
+                            <img src="../assets/images/galeria/garden6.jpeg">
+                            <img src="../assets/images/galeria/garden10.jpeg">
+                            <img src="../assets/images/galeria/garden13.jpeg">
+                            <img src="../assets/images/galeria/garden16.jpeg">
+                            <img src="../assets/images/galeria/garden21.jpg">
+                        </div>
+
+                        <div class="column galeria3">
                             <img src="../assets/images/galeria/garden11.jpg">
                             <img src="../assets/images/galeria/garden14.jpeg">
                             <img src="../assets/images/galeria/garden15.jpeg">
                             <img src="../assets/images/galeria/garden19.jpeg">
                             <img src="../assets/images/galeria/garden24.jpeg">
                             <img src="../assets/images/galeria/madareteto.jpg">
-                            <img src="../assets/images/galeria/lake6.jpeg">
-                            <img src="../assets/images/galeria/garden27.jpg">
+                        </div>
+
+                    </div>
+                </div>
+
+                </div>
+            </div>
+            </div>
+
+         <!-- Modal kert es to -->
+
+          <!-- Modal -->
+            <div class="modal fade" id="exampleModalLongLake" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog-apartman" role="document"> 
+                <div class="modal-content" >
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Tó és rendezvények</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" >
+
+                    <div class="row_galeria">
+
+                        <div class="column galeria1">
+                            <img src="../assets/images/galeria/dezsa1.jpg">
+                            <img src="../assets/images/galeria/dezsa2.jpg">
+                            <img src="../assets/images/galeria/party1.jpeg">
+                            <img src="../assets/images/galeria/party4.jpeg">
+                            <img src="../assets/images/galeria/party6.jpeg">
+                            <img src="../assets/images/galeria/party12.jpeg">
+                            <img src="../assets/images/galeria/party11.jpeg">
+                            <img src="../assets/images/galeria/party18.jpeg">
+
+                        </div>
+
+                        <div class="column galeria2">
+                            <img src="../assets/images/galeria/lake5.jpeg">
+                            <img src="../assets/images/galeria/lake11.jpeg">
+                            <img src="../assets/images/galeria/lake8.jpg">
+                            <img src="../assets/images/galeria/party2.jpeg">
+                            <img src="../assets/images/galeria/party7.jpeg">
+                            <img src="../assets/images/galeria/party13.jpeg">
+                            <img src="../assets/images/galeria/party15.jpeg">
+                            <img src="../assets/images/galeria/party9.jpeg">
+                        </div>
+
+                        <div class="column galeria3">
+                            <img src="../assets/images/galeria/lake7.jpeg">
                             <img src="../assets/images/galeria/party3.jpeg">
                             <img src="../assets/images/galeria/party5.jpeg">
                             <img src="../assets/images/galeria/party8.jpeg">
                             <img src="../assets/images/galeria/party10.jpeg">
                             <img src="../assets/images/galeria/party16.jpeg">
                             <img src="../assets/images/galeria/party17.jpeg">
+                            <img src="../assets/images/galeria/party14.jpeg">
                         </div>
 
                     </div>

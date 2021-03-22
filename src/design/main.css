@@ -9,6 +9,7 @@
     height: 100vh;
     background-size: cover;
     position: relative;
+    background-attachment: fixed;
 }
 
 .logo_container{
@@ -79,6 +80,7 @@
     height: 100vh;
     background-size: cover;
     position: relative;
+    background-attachment: fixed;
 }
 
 .room_container{
@@ -232,6 +234,10 @@
 
 /* Extrak */
 
+.extrak_hatter{
+    background-attachment: fixed;
+}
+
 .extra_img img{
     width: 240px;
     margin: 10px;
@@ -340,4 +346,70 @@
       flex: 100%;
       max-width: 100%;
     }
+  }
+
+  .modal-title{
+    font-family: 'Soulwave';
+    font-size: 80px;
+    padding-left: 30px;
+  }
+
+  /* kapcsolat */
+
+  .kapcsolat{
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    display: grid;
+    background-attachment: fixed;
+  }
+
+  .kapcsolat_text{
+      font-family: 'Cormorant Garamond';
+      font-size: 20px;
+      color: whitesmoke;
+      padding-left: 40px;
+  }
+
+  .kapcsolat_box{
+    border-radius: 10px;
+    opacity: 1;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .1);
+    padding: 30px;
+    margin-left: 30px;
+    position: relative;
+  }
+
+  .form-control{
+      width: 250px;
+  }
+
+  .rolunk{
+      font-family: 'Soulwave';
+      font-size: 30px;
+      color: whitesmoke;
+      padding-top: 30px;
+  }
+
+  .velemeny{
+      font-family: 'Cormorant Garamond';
+      font-size: 22px;
+      color: whitesmoke;
+      padding-left: 15px;
+      line-height: 22px;
+      margin-top: -10px;
+  }
+
+  .quote_top{
+      opacity: 0.3;
+      width: 110px;
+      position: absolute;
+      margin-top: -40px;
+  }
+
+  .quote_bottom{
+      opacity: 0.3;
+      width: 110px;
+      float: right;
   }
