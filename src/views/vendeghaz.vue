@@ -1,4 +1,5 @@
 <template>
+  <section id="bemutatkozas">
   <div class="container">
     <div class="container page bemutatkozas">
       <h1 class="display-1">Kutyabarát</h1>
@@ -19,4 +20,5 @@
       </div>
     </div>
   </div>
+  </section>
 </template>

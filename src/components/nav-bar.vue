@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav
-      class="navbar navbar-expand-lg navbar navbar-dark bg-dark fixed-top"
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
       style="opacity: 0.8"
     >
       <NavBarLinks></NavBarLinks>

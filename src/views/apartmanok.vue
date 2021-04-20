@@ -1,4 +1,5 @@
 <template>
+  <section id="szobak">
   <div>
     <div class="Sir_David" :style="selectedRoom.background">
       <div class="room_container page szobak">
@@ -97,8 +98,32 @@
       </div>
     </div>
 
+  <div class="szobak_mobil">
+    
+    <div class="container">
+
+          <h1 class="display-1">Ismerd meg az</h1>
+          <h1 class="display-2">apartmanokat</h1>
+
+    <div>
+      <button type="button" class="btn btn-szoba" data-toggle="modal" data-target="#ModalBicikli"><img src="../assets/images/apartmanok/sirdavid_mobil.png"></button>
+    </div>
+
+    <div>
+      <button type="button" class="btn btn-szoba" data-toggle="modal" data-target="#ModalBicikli"><img src="../assets/images/apartmanok/maui_mobil.png"></button>
+    </div>
+
+    <div>
+      <button type="button" class="btn btn-szoba" data-toggle="modal" data-target="#ModalBicikli"><img src="../assets/images/apartmanok/herrmayer_mobil.png"></button>
+    </div>
+
+    </div>
+
+  </div>
+
     <ApartmanModal :room="selectedRoom" />
   </div>
+  </section>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-
+    <section id="extrak">
     <div class="extrak_hatter"
     :style="{
       'background-image': `url(${require('../assets/images/extrak/extrak_background.jpeg')})`,
@@ -16,15 +16,15 @@
 
             <div class="row">
 
-                <div class="col lg-auto extra_img">
+                <div class="col-3-sm col-9-lg lg-auto extra_img">
                      <button type="button" class="btn btn-link" data-toggle="modal" data-target="#ModalBicikli"><img src="../assets/images/extrak/button_bike.png"></button>
                 </div>
 
-                <div class="col lg-auto extra_img">
+                <div class="col-3-sm col-9-lg lg-auto extra_img">
                     <button type="button" class="btn btn-link" data-toggle="modal" data-target="#ModalBoatCentered"><img src="../assets/images/extrak/button_boat.png"></button>
                 </div>
 
-                <div class="col lg-auto extra_img">
+                <div class="col-3-sm col-9-lg lg-auto extra_img">
                     <button type="button" class="btn btn-link" data-toggle="modal" data-target="#ModalBath"><img src="../assets/images/extrak/button_bath.png"></button>
                 </div>
 
@@ -91,7 +91,7 @@
         </div>
 
     </div>
-
+    </section>
 </template>
 
 <script>

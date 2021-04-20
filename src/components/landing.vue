@@ -1,6 +1,8 @@
 <template>
+<div>
+  
   <div
-    class="landing"
+    class="landing landing_web"
     :style="{
       'background-image': `url(${require('../assets/images/landing/landing_background.jpg')})`,
     }"
@@ -9,6 +11,9 @@
       <img class="mainlogo" src="../assets/images/landing/logo_house.png" alt="logo" />
     </div>
   </div>
+
+
+</div>
 </template>
 
 <script>

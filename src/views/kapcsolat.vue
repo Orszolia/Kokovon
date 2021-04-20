@@ -1,5 +1,5 @@
 <template>
-
+<section id="kapcsolat">    
     <div class="kapcsolat"
     :style="{
       'background-image': `url(${require('../assets/images/kapcsolat.jpg')})`,
@@ -104,7 +104,7 @@
     </div>
 
     </div>
-
+</section>
 </template>
 
 <script>

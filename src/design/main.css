@@ -2,14 +2,24 @@
     font-family: "Soulwave";
     src: local("Soulwave"), url("../assets/Fonts/Soulwave.ttf") format("woff");
 }
+html{
+    scroll-behavior: smooth;
+}
 
 /* Landing page */
 
-.landing{
+.landing_web{
     height: 100vh;
     background-size: cover;
     position: relative;
     background-attachment: fixed;
+    display: block;
+    background-image: url(../assets/images/landing/landing_background.jpg);
+    overflow: hidden;
+}
+
+.landing_mobil{
+    display: none;
 }
 
 .logo_container{
@@ -21,25 +31,72 @@
 
 .mainlogo{
     padding-top: 35vh;
-    max-width: 650px;
+    width: clamp(200px, 50% + 20px, 650px);
+
 }
 
 .nav-item{
     font-family: 'Cormorant Garamond', serif;
     text-transform: uppercase;
     font-weight: bold;
-    color: whitesmoke !important;
+    color: rgb(255, 255, 255);
+    padding: 2px;
+}
+
+.btn-kisfaludy{
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    padding-top: 7px;
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 8px 16px;
+    text-decoration: none;
+    opacity: 1;
+}
+
+.kisfaludy-img{
+    width: 150%;
+    margin-left: -90px;
 }
 
 .mybutton{
     font-family: 'Cormorant Garamond', serif;
     text-transform: uppercase;
+    border-radius: 10px;
+    text-decoration: none;
 }
+
+li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 8px 16px;
+    text-decoration: none;
+    opacity: 1;
+  }
+  
+  /* Change the link color on hover */
+  li a:hover {
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    color: white !important;
+    text-decoration: none;
+  }
+
+  .btn-kisfaludy:hover{
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    color: white !important;
+    text-decoration: none;
+  }
 
 /* Kutyabarat vendeghaz bemutatkozas */
 
 .page{
-    height: 100vh;  
+    min-height: 100vh;  
+    width:100%;
+    overflow: hidden;
 }
 
 .bemutatkozas{
@@ -50,14 +107,14 @@
     font-family: 'Cormorant Garamond', serif;
     font-weight: bold;
     padding-top: 80px;
-    font-size: 70px !important;
+    font-size: clamp(2rem, -0.88rem + 8.4vw, 4.5rem) !important;
 }
 
 .display-2{
     font-family: 'Soulwave';
     padding-left: 165px;
     margin-top: -42px;
-    font-size: 90px !important;
+    font-size: clamp(2rem, -0.88rem + 8.4vw, 4.5rem) !important;
 }
 
 .kutyabarat_img_1{
@@ -67,11 +124,9 @@
 
 .lead{
     font-family: 'Cormorant Garamond', serif;
-    letter-spacing: 0.9px;
-    padding-left: 50px;
-    margin-right: 230px;
-    font-size: 28px !important;
-    line-height: 32px;
+    letter-spacing: normal;
+    font-size: clamp(0.8rem, -0.7rem + 8vw, 2rem);
+    line-height: clamp(18px, 50% + 20px, 80px);;
 }
 
 /* Apartmanok */
@@ -155,6 +210,8 @@
 
 }
 
+
+
 /* Modal apartmanok */
 
 .modal .modal-dialog-apartman{
@@ -236,10 +293,11 @@
 
 .extrak_hatter{
     background-attachment: fixed;
+    background-position: center;
 }
 
 .extra_img img{
-    width: 240px;
+    width: clamp(20px, 70% + 70px, 200px) !important;
     margin: 10px;
     transition: 0.15s ease-in;
 }
@@ -333,6 +391,10 @@
     vertical-align: middle;
     width: 100%;
   }
+
+  .szobak_mobil {
+      display: none;
+  }
   
   @media screen and (max-width: 800px) {
     .column {
@@ -412,4 +474,45 @@
       opacity: 0.3;
       width: 110px;
       float: right;
+  }
+
+  @media only screen and (max-width: 419px) {
+
+    .logo_container{
+        width: clamp(400px, 100% + 10px, 800px);
+    }
+
+    .landing{
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-image: url(../assets/images/landing/landing_mobil.jpeg) !important;
+        overflow: hidden;
+    }
+
+    .display-1{
+        margin-left: 20px;
+    }
+
+    .display-2{
+        padding-top: 30px;
+        margin-left: -80px;
+    }
+
+    .Sir_David{
+        display: none;
+    }
+
+    .btn-szoba{
+        max-width: 100%;
+    }
+
+    .btn-szoba img{
+        width: 280px;
+    }
+
+    .szobak_mobil{
+        display: block;
+    }
+
   }
