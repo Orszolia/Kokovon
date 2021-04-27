@@ -6,7 +6,7 @@
         <h1 class="display-2">nálunk!</h1>
 
         <div class="row">
-          <div class="col-5" style="margin-bottom: 20px">
+          <div class="col-lg-5" style="margin-bottom: 20px">
             <Calendar
               @get_arrival_date="get_arrival_date"
               @get_leave_date="get_leave_date"
@@ -16,10 +16,10 @@
             />
           </div>
 
-          <div class="col-6">
+          <div class="col-lg-6">
             <form>
               <div class="row">
-                <div class="col-6">
+                <div class="col-lg-6">
                   <div class="form-group">
                     <div class="form-check">
                       <input
@@ -135,7 +135,8 @@
                         type="button"
                         class="btn btn-outline-primary eye_button show_herrmayer hidden"
                         @click="
-                          removeData(false, 'herrmayer'), newButton2('herrmayer')
+                          removeData(false, 'herrmayer'),
+                            newButton2('herrmayer')
                         "
                       >
                         <i class="fas fa-eye"></i>
@@ -235,7 +236,7 @@
                   />
                 </div>
 
-                <div class="col-6">
+                <div class="col-lg-6">
                   <div class="form-group">
                     <label for="inputName">Neved:</label>
                     <input
@@ -326,7 +327,9 @@
                           value="dézsa"
                           v-model="extra"
                         />
-                        <label class="form-check-label" for="dezsa">Dézsa</label>
+                        <label class="form-check-label" for="dezsa"
+                          >Dézsa</label
+                        >
                       </div>
                     </div>
                   </div>
@@ -354,7 +357,9 @@
                           value="grill"
                           v-model="extra"
                         />
-                        <label class="form-check-label" for="grill">Grill</label>
+                        <label class="form-check-label" for="grill"
+                          >Grill</label
+                        >
                       </div>
                     </div>
                   </div>
