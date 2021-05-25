@@ -512,11 +512,48 @@ li a {
     }
 
     .btn-szoba img{
-        width: 280px;
+        width: 200px;
+        padding-bottom: 20px;
     }
 
     .szobak_mobil{
         display: block;
     }
+    
+    .sirdavid_photo2_mobil{
+        width: 100%;
+    }
+    
+    .szobainfo_mobil{
+        margin: auto;
+        border-radius: 0% !important;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 15px !important;
+    }
 
+    .apartman_nev_mobil{
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    .apartman_nev2_mobil{
+        font-family: 'Soulwave';
+        font-size: 30px;
+        float: right;
+        margin-top: -10px;
+    }
+
+    .table_mobil{
+        margin: 0px !important;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 12px;
+    }
+
+    .aprobetus_mobil{
+        font-size: 10px;
+        font-family: 'Cormorant Garamond', serif;
+        line-height: 3px;
+        margin-top: 3px;
+    }
   }

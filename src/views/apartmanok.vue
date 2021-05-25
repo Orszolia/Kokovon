@@ -106,15 +106,15 @@
           <h1 class="display-2">apartmanokat</h1>
 
     <div>
-      <button type="button" class="btn btn-szoba" data-toggle="modal" data-target="#ModalBicikli"><img src="../assets/images/apartmanok/sirdavid_mobil.png"></button>
+      <button type="button" class="btn btn-szoba" data-toggle="modal" data-target=".bg-modal-sirdavid"><img src="../assets/images/apartmanok/sirdavid_mobil.png"></button>
     </div>
 
     <div>
-      <button type="button" class="btn btn-szoba" data-toggle="modal" data-target="#ModalBicikli"><img src="../assets/images/apartmanok/maui_mobil.png"></button>
+      <button type="button" class="btn btn-szoba" data-toggle="modal" data-target=".bg-modal-maui"><img src="../assets/images/apartmanok/maui_mobil.png"></button>
     </div>
 
     <div>
-      <button type="button" class="btn btn-szoba" data-toggle="modal" data-target="#ModalBicikli"><img src="../assets/images/apartmanok/herrmayer_mobil.png"></button>
+      <button type="button" class="btn btn-szoba" data-toggle="modal" data-target=".bg-modal-herrmayer"><img src="../assets/images/apartmanok/herrmayer_mobil.png"></button>
     </div>
 
     </div>
@@ -122,6 +122,7 @@
   </div>
 
     <ApartmanModal :room="selectedRoom" />
+    <ApartmanModalMobil />
   </div>
   </section>
 </template>
@@ -167,10 +168,11 @@ const Rooms = [
 ];
 
 import ApartmanModal from "@/components/apartman-modal";
+import ApartmanModalMobil from "@/components/apartman-modal-mobil";
 
 export default {
   name: "Rooms",
-  components: { ApartmanModal },
+  components: { ApartmanModal, ApartmanModalMobil },
   data() {
     return {
       rooms: Rooms,
