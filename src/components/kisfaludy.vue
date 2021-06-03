@@ -10,5 +10,14 @@
         </div>
         </div>
 
+        <!-- Modal Kisfaludy -->
+        <div class="modal fade extrakModal" id="ModalKisfaludyMobil" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <img class="kisfaludy-mobil" src="../assets/images/tamogatas_mobil.jpg">
+            </div>
+        </div>
+        </div>
+
 </div>  
 </template>

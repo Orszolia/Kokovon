@@ -41,6 +41,7 @@
 
         <li class="nav-item">
           <button type="button" class="btn btn-kisfaludy" data-toggle="modal" data-target="#ModalKisfaludy">Kisfaludy</button>
+          <button type="button" class="btn btn-kisfaludy-mobil" data-toggle="modal" data-target="#ModalKisfaludyMobil">Kisfaludy</button>
         </li>
       </ul>
 

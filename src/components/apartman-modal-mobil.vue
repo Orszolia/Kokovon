@@ -12,6 +12,10 @@
       <div class="modal-content">
         <div class="container-fluid sirdavid_foglalas">
 
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+
           <h1 class="apartman_nev_mobil">
             Sir David
           </h1>
@@ -70,6 +74,10 @@
         <div class="modal-content">
             <div class="container-fluid sirdavid_foglalas">
 
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            
             <h1 class="apartman_nev_mobil">
                 Maui
             </h1>
@@ -128,9 +136,14 @@
         <div class="modal-content">
             <div class="container-fluid sirdavid_foglalas">
 
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+
             <h1 class="apartman_nev_mobil">
                 Herr Mayer
             </h1>
+
             <h1 class="apartman_nev2_mobil">Apartman</h1>
 
             <button class="szobainfo_mobil btn btn-outline-dark">

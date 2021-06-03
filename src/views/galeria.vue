@@ -11,7 +11,7 @@
                         <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModalLongHouse">
                         <img 
                         class="galeria house"
-                        src="../assets/images/galeria_page/galeria_house.png" style="width: 450px;">
+                        src="../assets/images/galeria_page/galeria_house.png">
                         </button>
                     </div>
                     
@@ -19,7 +19,7 @@
                         <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModalLongLake">
                         <img 
                         class="galeria lake"
-                        src="../assets/images/galeria_page/galeria_lake.png" style="width: 450px;">
+                        src="../assets/images/galeria_page/galeria_lake.png">
                         </button>
                     </div>
 
@@ -30,21 +30,21 @@
                     <div class="col"> 
                         <img 
                         class="galeria road1"
-                        src="../assets/images/galeria_page/road_1.png" style="width: 160px;">
+                        src="../assets/images/galeria_page/road_1.png">
                     </div>
                     
                     <div class="col">
                         <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModalLongPajta">                   
                         <img 
                         class="galeria pajta"
-                        src="../assets/images/galeria_page/galeria_pajta.png" style="width: 400px;">
+                        src="../assets/images/galeria_page/galeria_pajta.png">
                         </button>
                     </div>
 
                     <div class="col">
                         <img 
                         class="galeria road2"
-                        src="../assets/images/galeria_page/road_2.png" style="width: 140px;">
+                        src="../assets/images/galeria_page/road_2.png">
                     </div>
 
                 </div>
@@ -60,9 +60,9 @@
                     <div class="modal-content" >
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLongTitle">Ház és terasz</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
                     </div>
                     <div class="modal-body" >
 
