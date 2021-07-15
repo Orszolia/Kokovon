@@ -233,6 +233,7 @@
                       v-if="arrival != undefined"
                       >{{ arrival }}</span
                     >
+                    <input type="hidden" v-model="arrival" name="arrival" />
                   </div>
 
                   <div class="form-group">
@@ -249,6 +250,7 @@
                       v-if="leave != undefined"
                       >{{ leave }}</span
                     >
+                    <input type="hidden" v-model="leave" name="leave" />
                   </div>
 
                   <Uzenetek
@@ -298,6 +300,7 @@
                           v-model="adults"
                           value="1"
                           min="1"
+                          name="adults"
                         />
                       </div>
                     </div>
@@ -312,6 +315,7 @@
                           v-model="children"
                           value="0"
                           min="0"
+                          name="children"
                         />
                       </div>
                     </div>
@@ -340,6 +344,7 @@
                           id="bicikli"
                           value="bicikli"
                           v-model="extra"
+                          name="extra"
                         />
                         <label class="form-check-label" for="bicikli"
                           >Biciklik</label
@@ -353,6 +358,7 @@
                           id="dezsa"
                           value="dézsa"
                           v-model="extra"
+                          name="extra"
                         />
                         <label class="form-check-label" for="dezsa"
                           >Dézsa</label
@@ -370,6 +376,7 @@
                           id="babaagy"
                           value="babaágy"
                           v-model="extra"
+                          name="extra"
                         />
                         <label class="form-check-label" for="babaagy"
                           >Babaágy</label
@@ -383,6 +390,7 @@
                           id="grill"
                           value="grill"
                           v-model="extra"
+                          name="extra"
                         />
                         <label class="form-check-label" for="grill"
                           >Grill</label
@@ -397,6 +405,12 @@
                   >
                     Küldés
                   </button>
+                  <div
+                    class="alert"
+                    role="alert"
+                    style="margin: 10px 0px"
+                    id="reservation_alert"
+                  ></div>
                 </div>
               </div>
             </form>
@@ -408,8 +422,6 @@
 </template>
 
 <script>
-//const querystring = require("querystring");
-
 import Calendar from "../components/calendar";
 import moment from "moment";
 import Uzenetek from "../components/messages";
@@ -440,27 +452,63 @@ export default {
   },
   methods: {
     sendEmail(e) {
-      try {
-        emailjs.sendForm(
-          "service_7l0rp2n",
-          "template_q46f9rh",
-          e.target,
-          "user_2fTzZBeA9lR7RMZjUkzge",
-          {
-            name: this.name,
-            email: this.email,
-            calendar_view: this.calendar_view,
-            message: this.message,
-          }
-        );
-        console.log(this.name + " sent an email");
-      } catch (error) {
-        console.log({ error });
+      if (this.arrival === undefined || this.leave === undefined) {
+        document
+          .getElementById("reservation_alert")
+          .classList.add("alert-danger");
+        document.getElementById("reservation_alert").innerHTML =
+          "Kérlek válassz dátumot!";
+      } else if (this.rooms.length < 1) {
+        document
+          .getElementById("reservation_alert")
+          .classList.add("alert-danger");
+        document.getElementById("reservation_alert").innerHTML =
+          "Kérlek válassz apartmant!";
+      } else {
+        try {
+          emailjs.sendForm(
+            "service_7l0rp2n",
+            "template_q46f9rh",
+            e.target,
+            "user_2fTzZBeA9lR7RMZjUkzge",
+            {
+              name: this.name,
+              email: this.email,
+              calendar_view: this.calendar_view,
+              message: this.message,
+              arrival: this.arrival,
+              leave: this.leave,
+              adults: this.adults,
+              children: this.children,
+              extra: this.extra,
+            }
+          );
+          document
+            .getElementById("reservation_alert")
+            .classList.remove("alert-danger");
+          document
+            .getElementById("reservation_alert")
+            .classList.add("alert-success");
+          document.getElementById("reservation_alert").innerHTML =
+            "Üzenet elküldve!";
+          // Reset form field
+          this.name = undefined;
+          this.email = undefined;
+          this.adults = 1;
+          this.children = 0;
+          this.message = undefined;
+          this.rooms = [];
+          this.arrival = undefined;
+          this.leave = undefined;
+          this.extra = [];
+        } catch (error) {
+          document
+            .getElementById("reservation_alert")
+            .classList.add("alert-danger");
+          document.getElementById("reservation_alert").innerHTML =
+            "A küldés sikertelen, a foglalás jelenleg az alábbi telefonszámon lehetséges: +36703394465";
+        }
       }
-      // Reset form field
-      this.name = "";
-      this.email = "";
-      this.message = "";
     },
     getNextDays() {
       var today = new Date();

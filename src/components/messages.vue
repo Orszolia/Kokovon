@@ -1,7 +1,8 @@
 <template>
   <div>
     <p class="hiba" v-if="thisSeason.min_nights > night_number">
-      Ebben az időszakban a minimális foglalás két éjszaka.
+      Ebben az időszakban a minimális foglalás
+      {{ thisSeason.min_nights }} éjszaka.
     </p>
   </div>
 </template>
@@ -45,31 +46,6 @@ const seasons = [
   },
 ];
 
-const room_prices = [
-  {
-    name: "Maui apartman",
-    capacity: 2,
-    price: 22000,
-  },
-  {
-    name: "Sir David apartman",
-    capacity: 2,
-    price: 22000,
-  },
-  {
-    name: "Herr Mayer apartman",
-    capacity: 4,
-    price: 22000,
-    extra_guests: 5000,
-  },
-  {
-    name: "Deluxe sátor",
-    capacity: 4,
-    price: 15000,
-    extra_guests: 5000,
-  },
-];
-
 export default {
   name: "Messages",
   data() {
@@ -83,7 +59,6 @@ export default {
       night_number: undefined,
       rooms: undefined,
       adults_number: 1,
-      final_price: 0,
     };
   },
   created() {},
@@ -100,14 +75,6 @@ export default {
     selected_dates: function (selected_dates) {
       this.night_number = selected_dates.length - 1;
     },
-    selected_rooms: function (selected_rooms) {
-      this.rooms = selected_rooms;
-      this.calculatePrice(this.rooms, this.adults_number);
-    },
-    adults: function (adults) {
-      this.adults_number = parseInt(adults);
-      this.calculatePrice(this.rooms, this.adults_number);
-    },
   },
   methods: {
     getSeason(arrival) {
@@ -120,24 +87,9 @@ export default {
         season_end = new Date(season_end);
         if (today >= season_start && today <= season_end) {
           this.thisSeason.name = season["name"];
-          this.thisSeason.price = season["price"];
           this.thisSeason.min_nights = season["min_nights"];
         }
       });
-    },
-    calculatePrice(rooms, adults) {
-      var temp = [];
-      room_prices.forEach((price) => {
-        if (rooms.includes(price["name"])) {
-          while (adults > 0 && price["capacity" > 0]) {
-            temp.push(adults * price["price"]);
-            adults = adults - 1;
-            console.log(price["capacity"]);
-            price["capacity"] = price["capacity"] - 1;
-          }
-        }
-      });
-      console.log(temp);
     },
   },
 };
