@@ -6,12 +6,11 @@
     <Vendeghaz />
     <Apartmanok />
     <Foglalas />
-    
+
     <Extrak />
     <Galeria />
     <Kapcsolat />
     <Kisfaludy />
-
   </div>
 </template>
 
@@ -28,7 +27,17 @@ import Kisfaludy from "@/components/kisfaludy";
 
 export default {
   name: "App",
-  components: { NavBar, Landing, Vendeghaz, Apartmanok, Foglalas, Extrak, Galeria, Kapcsolat, Kisfaludy },
+  components: {
+    NavBar,
+    Landing,
+    Vendeghaz,
+    Apartmanok,
+    Foglalas,
+    Extrak,
+    Galeria,
+    Kapcsolat,
+    Kisfaludy,
+  },
 };
 </script>
 

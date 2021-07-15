@@ -6,19 +6,22 @@
     aria-labelledby="myLargeModalLabel"
     aria-hidden="true"
   >
-    <div class="modal-dialog modal-dialog-apartman">
+    <div class="modal-dialog modal-dialog-apartman modal-lg">
       <div class="modal-content">
         <div class="container-fluid sirdavid_foglalas">
-          <button class="szobainfo btn btn-outline-dark">
-            FOGLALD LE MOST!
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
           </button>
 
           <h1 class="display-3" style="margin-left: 100px">
             {{ room.roomName }}
           </h1>
           <h1 class="display-4">{{ room.roomType }}</h1>
-
-          <p class="arak">árak</p>
 
           <div class="row justify-content-center">
             <div class="modal_col col-sm-auto">
@@ -43,6 +46,7 @@
             </div>
 
             <div class="modal_col col-sm-auto">
+              <p class="arak">árak</p>
               <table class="table table-bordered">
                 <tbody>
                   <tr>

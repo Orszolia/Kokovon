@@ -13,8 +13,13 @@
     "@fullcalendar/google-calendar": "^5.5.0",
     "@fullcalendar/interaction": "^5.5.0",
     "@fullcalendar/vue": "^5.5.0",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "emailjs-com": "^3.2.0",
+    "gsap": "^3.6.1",
+    "querystring": "^0.2.0",
     "vue": "^2.6.11",
+    "vue-axios": "^3.2.4",
     "vue-moment": "^4.1.0",
     "vuejs-datepicker": "^1.6.2"
   },

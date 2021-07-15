@@ -17,7 +17,7 @@
           </div>
 
           <div class="col-lg-6">
-            <form>
+            <form @submit.prevent="sendEmail">
               <div class="row">
                 <div class="col-lg-6">
                   <div class="form-group">
@@ -46,7 +46,12 @@
 
                       <button
                         type="button"
-                        class="btn btn-outline-danger eye_button show_maui hidden"
+                        class="
+                          btn btn-outline-danger
+                          eye_button
+                          show_maui
+                          hidden
+                        "
                         @click="removeData(false, 'maui'), newButton2('maui')"
                       >
                         <i class="fas fa-eye"></i>
@@ -89,7 +94,12 @@
 
                       <button
                         type="button"
-                        class="btn btn-outline-warning eye_button show_sirdavid hidden"
+                        class="
+                          btn btn-outline-warning
+                          eye_button
+                          show_sirdavid
+                          hidden
+                        "
                         @click="
                           removeData(false, 'sirdavid'), newButton2('sirdavid')
                         "
@@ -123,7 +133,11 @@
                       >
                       <button
                         type="button"
-                        class="btn btn-outline-primary eye_button hide_herrmayer"
+                        class="
+                          btn btn-outline-primary
+                          eye_button
+                          hide_herrmayer
+                        "
                         @click="
                           removeData(true, 'herrmayer'), newButton('herrmayer')
                         "
@@ -133,7 +147,12 @@
 
                       <button
                         type="button"
-                        class="btn btn-outline-primary eye_button show_herrmayer hidden"
+                        class="
+                          btn btn-outline-primary
+                          eye_button
+                          show_herrmayer
+                          hidden
+                        "
                         @click="
                           removeData(false, 'herrmayer'),
                             newButton2('herrmayer')
@@ -176,7 +195,12 @@
 
                       <button
                         type="button"
-                        class="btn btn-outline-success eye_button show_sator hidden"
+                        class="
+                          btn btn-outline-success
+                          eye_button
+                          show_sator
+                          hidden
+                        "
                         @click="removeData(false, 'sator'), newButton2('sator')"
                       >
                         <i class="fas fa-eye"></i>
@@ -201,7 +225,7 @@
                       id="start_input"
                       class="date_input"
                       v-if="arrival == undefined"
-                      >Válassz egy dátumot</span
+                      >Dátum</span
                     >
                     <span
                       id="start_input"
@@ -217,7 +241,7 @@
                       id="end_input"
                       class="date_input"
                       v-if="leave == undefined"
-                      >Válassz egy dátumot</span
+                      >Dátum</span
                     >
                     <span
                       id="end_input"
@@ -241,6 +265,7 @@
                     <label for="inputName">Neved:</label>
                     <input
                       v-model="name"
+                      name="name"
                       type="text"
                       class="form-control"
                       id="inputName"
@@ -252,6 +277,7 @@
                     <label for="inputEmail">E-mail címed:</label>
                     <input
                       v-model="email"
+                      name="email"
                       type="email"
                       class="form-control"
                       id="inputEmail"
@@ -298,6 +324,7 @@
                       id="inputMessage"
                       rows="3"
                       v-model="message"
+                      name="message"
                       required
                     ></textarea>
                   </div>
@@ -364,7 +391,10 @@
                     </div>
                   </div>
 
-                  <button type="button kuldes" class="btn btn-dark mt-4 btn-lg">
+                  <button
+                    type="button kuldes submit"
+                    class="btn btn-dark mt-4 btn-lg"
+                  >
                     Küldés
                   </button>
                 </div>
@@ -378,9 +408,12 @@
 </template>
 
 <script>
+//const querystring = require("querystring");
+
 import Calendar from "../components/calendar";
 import moment from "moment";
 import Uzenetek from "../components/messages";
+import emailjs from "emailjs-com";
 
 export default {
   name: "Foglalas",
@@ -406,6 +439,29 @@ export default {
     // this.getNextDays();
   },
   methods: {
+    sendEmail(e) {
+      try {
+        emailjs.sendForm(
+          "service_7l0rp2n",
+          "template_q46f9rh",
+          e.target,
+          "user_2fTzZBeA9lR7RMZjUkzge",
+          {
+            name: this.name,
+            email: this.email,
+            calendar_view: this.calendar_view,
+            message: this.message,
+          }
+        );
+        console.log(this.name + " sent an email");
+      } catch (error) {
+        console.log({ error });
+      }
+      // Reset form field
+      this.name = "";
+      this.email = "";
+      this.message = "";
+    },
     getNextDays() {
       var today = new Date();
       var firstDate = new Date(today);

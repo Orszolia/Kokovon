@@ -3,10 +3,6 @@
     <p class="hiba" v-if="thisSeason.min_nights > night_number">
       Ebben az időszakban a minimális foglalás két éjszaka.
     </p>
-    <div>
-      <label for="iranyar">Ár:</label><br />
-      <span class="iranyar">{{ final_price }} ,-Ft</span>
-    </div>
   </div>
 </template>
 
@@ -147,12 +143,3 @@ export default {
 };
 </script>
 
-<style>
-.iranyar {
-  border: solid;
-  border-width: 1px;
-  border-color: rgba(128, 128, 128, 0.527);
-  padding: 5px 40px;
-  border-radius: 5%;
-}
-</style>

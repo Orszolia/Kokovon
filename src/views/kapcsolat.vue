@@ -6,9 +6,9 @@
         'background-image': `url(${require('../assets/images/kapcsolat.jpg')})`,
       }"
     >
-      <div class="page">
+      <div>
         <div class="kapcsolat_blur">
-          <div class="container">
+          <div class="container" style="padding-bottom: 100px">
             <h1 class="display-1 white" style="color: whitesmoke">
               Lépj velünk
             </h1>
@@ -63,10 +63,10 @@
                       >Neved:</label
                     >
                     <input
-                      v-model="name"
+                      v-model="contact_name"
                       type="text"
                       class="form-control"
-                      id="inputName"
+                      id="contactInputName"
                       placeholder="Név"
                       required
                     />
@@ -77,10 +77,10 @@
                       >E-mail címed:</label
                     >
                     <input
-                      v-model="email"
+                      v-model="contact_email"
                       type="email"
                       class="form-control"
-                      id="inputEmail"
+                      id="contactInputEmail"
                       placeholder="E-mail"
                       required
                     />
@@ -92,9 +92,9 @@
                     >
                     <textarea
                       class="form-control"
-                      id="inputMessage"
+                      id="contactInputMessage"
                       rows="3"
-                      v-model="message"
+                      v-model="contact_message"
                       required
                     ></textarea>
                   </div>
@@ -130,5 +130,13 @@
 <script>
 export default {
   name: "Kapcsolat",
+
+  data() {
+    return {
+      contact_name: undefined,
+      contact_email: undefined,
+      contact_message: undefined,
+    };
+  },
 };
 </script>

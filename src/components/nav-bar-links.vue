@@ -14,7 +14,6 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-
         <li class="nav-item">
           <a href="#bemutatkozas">Bemutatkozás</a>
         </li>
@@ -40,20 +39,30 @@
         </li>
 
         <li class="nav-item">
-          <button type="button" class="btn btn-kisfaludy" data-toggle="modal" data-target="#ModalKisfaludy">Kisfaludy</button>
-          <button type="button" class="btn btn-kisfaludy-mobil" data-toggle="modal" data-target="#ModalKisfaludyMobil">Kisfaludy</button>
+          <button
+            type="button"
+            class="btn btn-kisfaludy"
+            data-toggle="modal"
+            data-target="#ModalKisfaludy"
+          >
+            Kisfaludy
+          </button>
+          <button
+            type="button"
+            class="btn btn-kisfaludy-mobil"
+            data-toggle="modal"
+            data-target="#ModalKisfaludyMobil"
+          >
+            Kisfaludy
+          </button>
         </li>
       </ul>
+    </div>
 
-      <div class="form-inline my-2 my-lg-0">
-        <button
-          class="btn btn btn-outline-light mybutton"
-          style="font-weight: bold;">
-          <a href="#foglalas">
-          Foglalás</a>
-        </button>
-        
-      </div>
+    <div class="form-inline">
+      <button class="btn btn-light mybutton" style="font-weight: bold">
+        <a href="#foglalas">Foglalás</a>
+      </button>
     </div>
   </div>
 </template>
