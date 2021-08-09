@@ -260,6 +260,13 @@
                     :selected_rooms="rooms"
                     :adults="adults"
                   />
+
+                  <div class="form-group">
+                    <p>
+                      A foglalás csak a visszaigazoló email megérkezése után
+                      válik érvénysessé.
+                    </p>
+                  </div>
                 </div>
 
                 <div class="col-lg-6">
