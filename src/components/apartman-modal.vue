@@ -27,22 +27,14 @@
             <div class="modal_col col-sm-auto">
               <img
                 class="sirdavid_photo"
-                src="../assets/images/modal/sirdavid_photo1.jpg"
-                alt=""
+                :src="room.image1"
+                alt="apartmanphoto1"
               /><br />
-              <img
-                class="sirdavid_photo"
-                src="../assets/images/modal/sirdavid_photo2.jpg"
-                alt=""
-              />
+              <img class="sirdavid_photo" :src="room.image2" alt="" />
             </div>
 
             <div class="modal_col col-sm-auto">
-              <img
-                class="sirdavid_photo2"
-                src="../assets/images/modal/sirdavid_photo3.jpeg"
-                alt=""
-              />
+              <img class="sirdavid_photo2" :src="room.image3" alt="" />
             </div>
 
             <div class="modal_col col-sm-auto">
@@ -51,15 +43,24 @@
                 <tbody>
                   <tr>
                     <td>Főszezon (jún.15.-aug.31.)</td>
-                    <td>24 000,- Ft</td>
+                    <td v-if="room.id < 4">24 000,- Ft</td>
+                    <td v-else>20 000,- Ft</td>
                   </tr>
                   <tr>
-                    <td>Elő-/utószezon (ápr.1.-jún.14., szept.1-okt.31.)</td>
-                    <td>20 000,- Ft</td>
+                    <td v-if="room.id < 4">
+                      Elő-/utószezon (ápr.1.-jún.14., szept.1-okt.31.)
+                    </td>
+                    <td v-if="room.id < 4">24 000,- Ft</td>
                   </tr>
                   <tr>
-                    <td>Szezonon kívül (nov.01.-márc.31.)</td>
-                    <td>15 000,- Ft</td>
+                    <td v-if="room.id < 4">
+                      Szezonon kívül (nov.01.-márc.31.)
+                    </td>
+                    <td v-if="room.id < 4">22 000,- Ft</td>
+                  </tr>
+                  <tr v-if="room.id === 3">
+                    <td>Az árak két főre vonatkoznak, ezen felül</td>
+                    <td>+5 000,- Ft fejenként</td>
                   </tr>
                 </tbody>
               </table>

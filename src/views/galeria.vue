@@ -75,7 +75,10 @@
         aria-labelledby="exampleModalLongTitle"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-apartman" role="document">
+        <div
+          class="modal-dialog modal-dialog-apartman modal-lg"
+          role="document"
+        >
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLongTitle_house">
@@ -127,7 +130,6 @@
 
                 <div class="column galeria3">
                   <img src="../assets/images/galeria/lamp.jpeg" />
-                  <img src="../assets/images/galeria/winter1.png" />
                   <img src="../assets/images/galeria/terasz3.jpg" />
                   <img src="../assets/images/galeria/sirdavid8.jpg" />
                   <img src="../assets/images/galeria/sirdavid10.jpeg" />
@@ -156,7 +158,10 @@
         aria-labelledby="exampleModalLongTitle"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-apartman" role="document">
+        <div
+          class="modal-dialog modal-dialog-apartman modal-lg"
+          role="document"
+        >
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLongTitle_pajta">
@@ -217,7 +222,10 @@
         aria-labelledby="exampleModalLongTitle"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-apartman" role="document">
+        <div
+          class="modal-dialog modal-dialog-apartman modal-lg"
+          role="document"
+        >
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLongTitle_lake">

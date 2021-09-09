@@ -154,6 +154,9 @@ const Rooms = [
     background: {
       backgroundImage: `url(${require("../assets/images/apartmanok/apartman_sirdavid.jpg")})`,
     },
+    image1: require("../assets/images/modal/sirdavid_photo1.jpg"),
+    image2: require("../assets/images/modal/sirdavid_photo2.jpg"),
+    image3: require("../assets/images/modal/sirdavid_photo3.jpeg"),
     roomType: "apartman",
     roomIcons: ["bed", "wifi", "fridge", "bathroom", "calendar"],
   },
@@ -163,6 +166,9 @@ const Rooms = [
     background: {
       backgroundImage: `url(${require("../assets/images/apartmanok/apartman_maui.jpg")})`,
     },
+    image1: require("../assets/images/modal/maui_photo1.jpg"),
+    image2: require("../assets/images/modal/maui_photo2.jpg"),
+    image3: require("../assets/images/modal/maui_photo3.jpg"),
     roomType: "apartman",
     roomIcons: ["bed", "wifi", "fridge", "bathroom", "ac"],
   },
@@ -172,6 +178,9 @@ const Rooms = [
     background: {
       backgroundImage: `url(${require("../assets/images/apartmanok/apartman_herrmayer.jpg")})`,
     },
+    image1: require("../assets/images/modal/herrmayer_photo1.jpg"),
+    image2: require("../assets/images/modal/herrmayer_photo2.jpg"),
+    image3: require("../assets/images/modal/herrmayer_photo3.jpg"),
     roomType: "apartman",
     roomIcons: ["bed", "singlebed", "fridge", "bathroom", "calendar"],
   },
@@ -179,8 +188,11 @@ const Rooms = [
     id: 4,
     roomName: "Deluxe",
     background: {
-      backgroundImage: `url(${require("../assets/images/apartmanok/apartman_herrmayer.jpg")})`,
+      backgroundImage: `url(${require("../assets/images/apartmanok/deluxe_sator2.jpg")})`,
     },
+    image1: require("../assets/images/modal/sator_photo1.jpg"),
+    image2: require("../assets/images/modal/sator_photo2.jpg"),
+    image3: require("../assets/images/modal/sator_photo3.jpg"),
     roomType: "sátor",
     roomIcons: ["bed", "singlebed", "bathroom", "calendar"],
   },
@@ -201,6 +213,9 @@ export default {
         background: {
           backgroundImage: `url(${require("../assets/images/apartmanok/apartman_sirdavid.jpg")})`,
         },
+        image1: require("../assets/images/modal/sirdavid_photo1.jpg"),
+        image2: require("../assets/images/modal/sirdavid_photo2.jpg"),
+        image3: require("../assets/images/modal/sirdavid_photo3.jpeg"),
         roomType: "apartman",
         roomIcons: ["bed", "wifi", "fridge", "bathroom", "calendar"],
       },

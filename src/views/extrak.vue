@@ -83,6 +83,7 @@
               gyönyörű helyekre látogathattok el, sok étterem, kávézó elérhető
               így.
             </div>
+            <img src="../assets/images/bike.jpg" alt="bicikli" />
           </div>
         </div>
       </div>
@@ -114,6 +115,8 @@
               barátunk szívesen lát Titeket a Balatonon a vitorláshajóján.
               Jelentkezni nála lehet, a 0670/1234567 számon.
             </div>
+
+            <img src="../assets/images/sailing.jpg" alt="vitorlas" />
           </div>
         </div>
       </div>
@@ -144,6 +147,7 @@
               Kertünkben kétszemélyes dézsa várja a feltöltődni vágyókat. Hideg
               időben kellemes időtöltés kirándulás után, előtt vagy helyett.
             </div>
+            <img src="../assets/images/dezsa.jpg" alt="dezsa" />
           </div>
         </div>
       </div>
