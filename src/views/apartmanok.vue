@@ -100,41 +100,75 @@
         </div>
       </div>
 
-      <div class="szobak_mobil">
-        <div class="container">
-          <h1 class="display-1">Ismerd meg az</h1>
-          <h1 class="display-2">apartmanokat</h1>
-
+      <div
+        class="szobak_mobil extrak_hatter"
+        :style="{
+          'background-image': `url(${require('../assets/images/extrak/extrak_background.jpeg')})`,
+        }"
+      >
+        <div class="container" style="color: white">
+          <h1 class="display-1">Sir David</h1>
+          <h1 class="display-2">apartman</h1>
           <div>
             <button
               type="button"
               class="btn btn-szoba"
               data-toggle="modal"
               data-target=".bg-modal-sirdavid"
+              style="padding: 0px"
             >
-              <img src="../assets/images/apartmanok/sirdavid_mobil.png" />
+              <img
+                src="../assets/images/apartmanok/sirdavid_mobil.png"
+                style="padding: 0px"
+              />
             </button>
           </div>
-
+          <h1 class="display-1">Maui</h1>
+          <h1 class="display-2">apartman</h1>
           <div>
             <button
               type="button"
               class="btn btn-szoba"
               data-toggle="modal"
               data-target=".bg-modal-maui"
+              style="padding: 0px"
             >
-              <img src="../assets/images/apartmanok/maui_mobil.png" />
+              <img
+                src="../assets/images/apartmanok/maui_mobil.png"
+                style="padding: 0px"
+              />
             </button>
           </div>
-
+          <h1 class="display-1">Herr Mayer</h1>
+          <h1 class="display-2">apartman</h1>
           <div>
             <button
               type="button"
               class="btn btn-szoba"
               data-toggle="modal"
               data-target=".bg-modal-herrmayer"
+              style="padding: 0px"
             >
-              <img src="../assets/images/apartmanok/herrmayer_mobil.png" />
+              <img
+                src="../assets/images/apartmanok/herrmayer_mobil.png"
+                style="padding: 0px"
+              />
+            </button>
+          </div>
+          <h1 class="display-1">Deluxe</h1>
+          <h1 class="display-2">sátor</h1>
+          <div>
+            <button
+              type="button"
+              class="btn btn-szoba"
+              data-toggle="modal"
+              data-target=".bg-modal-deluxe"
+              style="padding: 0px"
+            >
+              <img
+                src="../assets/images/apartmanok/deluxe_sator2.jpg"
+                style="padding: 30px; border-radius: 5%"
+              />
             </button>
           </div>
         </div>
