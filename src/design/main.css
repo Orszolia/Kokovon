@@ -2,66 +2,130 @@
     font-family: "Soulwave";
     src: local("Soulwave"), url("../assets/Fonts/Soulwave.ttf") format("woff");
 }
+html{
+    scroll-behavior: smooth;
+}
 
-.landing{
-    height: 100vh;
+section{
+    overflow: hidden;
+}
+
+/* Landing page */
+
+.landing_web{
     background-size: cover;
-    position: relative;
+    background-attachment: fixed;
+    display: block;
+    background-image: url(../assets/images/landing/landing_background.jpg);
+    min-height: 100vh;
+}
+
+.landing_mobil{
+    display: none;
 }
 
 .logo_container{
-    position: absolute;
     background-color: rgba(0, 0, 0, 0.486);
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 }
 
 .mainlogo{
     padding-top: 35vh;
-    max-width: 650px;
+    width: 500px;
 }
 
 .nav-item{
     font-family: 'Cormorant Garamond', serif;
     text-transform: uppercase;
     font-weight: bold;
-    color: whitesmoke !important;
+    color: rgb(255, 255, 255);
+    padding: 2px;
+}
+
+.btn-kisfaludy{
+    text-transform: uppercase;
+    display: block;
+    color: rgba(255, 255, 255, 0.63);
+    padding: 8px 16px;
+    text-decoration: none;
+    opacity: 1;
+    transition: .3s ease-in-out;
+    font-weight:normal;
+    font-size: 18px;
+    display: block;
+}
+
+.btn-kisfaludy-mobil{
+    display: none;
+}
+
+.kisfaludy-img{
+    width: 150%;
+    margin-left: -90px;
 }
 
 .mybutton{
     font-family: 'Cormorant Garamond', serif;
     text-transform: uppercase;
+    border-radius: 10px;
+    
+    font-size: 20px;
+}
+.mybutton a{
+   color: black;
+   text-decoration: none;
 }
 
+.nav-item a {
+    display: block;
+    color: rgba(255, 255, 255, 0.63);
+    padding: 8px 16px;
+    text-decoration: none;
+    opacity: 1;
+    transition: .3s ease-in-out;
+    font-weight:normal;
+    font-size: 18px;
+  }
+  
+  /* Change the link color on hover */
+  .nav-item a:hover {
+    border-radius: 10px;
+    color: white !important;
+    text-decoration: none;
+    transition: .2s ease-in-out;
+  }
+
+  .btn-kisfaludy:hover{
+    border-radius: 10px;
+    color: white !important;
+    text-decoration: none;
+    transition: .2s ease-in-out;
+  }
+
+/* Kutyabarat vendeghaz bemutatkozas */
+
 .page{
-    height: 100vh;  
+    min-height: 100vh;  
+    width:100%;
 }
 
 .bemutatkozas{
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .display-1{
     font-family: 'Cormorant Garamond', serif;
     font-weight: bold;
     padding-top: 80px;
-    font-size: 90px !important;
+    font-size: clamp(2rem, -0.88rem + 8.4vw, 4.5rem) !important;
 }
 
 .display-2{
     font-family: 'Soulwave';
     padding-left: 165px;
     margin-top: -42px;
-    font-size: 110px !important;
-}
-
-.lead{
-    font-family: 'Cormorant Garamond', serif;
-    letter-spacing: 0.9px;
-    padding-left: 50px;
-    margin-right: 230px;
-    font-size: 28px !important;
-    line-height: 32px;
+    font-size: clamp(2rem, -0.88rem + 8.4vw, 4.5rem) !important;
 }
 
 .kutyabarat_img_1{
@@ -69,16 +133,26 @@
     margin-bottom: 20px;
 }
 
+.lead{
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: normal;
+    font-size: clamp(0.8rem, -0.7rem + 8vw, 2rem);
+    line-height: clamp(18px, 50% + 20px, 80px);;
+}
+
+/* Apartmanok */
+
 .Sir_David{
-    height: 100vh;
+    min-height: 100vh;
     background-size: cover;
     position: relative;
+    background-attachment: fixed;
 }
 
 .room_container{
     position: absolute;
     background-color: rgba(0, 0, 0, 0.486);
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     padding-top: 80px;
 }
@@ -143,18 +217,17 @@
 
 .foglalas{
     margin-top: 50px;
-    float: right;
+    margin-bottom: 70px;
+
 }
 
-.modal .modal-dialog{
-    width: 90% !important;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: none;
-    margin-top: 20px;
-    position: relative;
-    padding: 0px;
-    height: 100%;
+
+
+/* Modal apartmanok */
+
+.modal .modal-dialog-apartman{
+    margin-top: 30px;
+    padding: 30px 0px;
 }
 
 .modal_col{
@@ -187,16 +260,13 @@
 .arak{
     font-family: 'Soulwave';
     font-size: 50px;
-    float: right;
-    position: absolute;
-    top:155px;
-    right:18px;
+    margin: -30px;
 }
 
 .table{
     margin: 0px !important;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .aprobetus{
@@ -211,10 +281,340 @@
     max-width: 15px;
 }
 
+/* Foglalas */
+
 .hiba{
     color: red;
-    font-size: 13px;
+    font-size: 18px;
     font-family: 'Cormorant Garamond', serif;
     font-weight: bold;
     margin-top: -8px;
 }
+
+/* Extrak */
+
+.extrak_hatter{
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.extra_img img{
+    width: 320px;
+    margin: 10px;
+    transition: 0.15s ease-in;
+}
+
+.extra_img img:hover{
+    transform: scale(1.1);
+    transition: 0.2s ease-in;
+}
+
+/* Extrak modal */
+
+.modal-header{
+    font: 'Cormorant Garamond', serif !important;
+}
+
+.display-5{
+    font-family: 'Soulwave';
+    font-size: 50px !important;
+    margin-bottom: -20px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.display-6{
+    margin: 25px;
+}
+
+/* Galeria */
+
+.galeria{
+    margin: 0px;
+    width: 100%;
+}
+
+.road1{
+    margin-left: 200px;
+    margin-top: -10px;
+    width: 50%;
+}
+
+.house{
+    transition: 0.15s ease-in;
+}
+
+.house:hover{
+    transform: scale(1.2);
+    transition: 0.2s ease-in;
+}
+
+.lake{
+    margin-left: 100px;
+    padding-top: 50px;
+    transition: 0.15s ease-in;
+}
+
+.lake:hover{
+    transform: scale(1.2);
+    transition: 0.2s ease-in;
+}
+
+.pajta{
+    transition: 0.15s ease-in;
+}
+
+.pajta:hover{
+    transform: scale(1.2);
+    transition: 0.2s ease-in;
+}
+
+.road2{
+    width: 50%;
+}
+
+.row_galeria {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Galeria modal */
+
+  .column {
+    flex: 33%;
+    max-width: 33%;
+    padding: 0 12px;
+  }
+  
+  .column img {
+    margin-top: 24px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  .szobak_mobil {
+      display: none;
+  }
+  
+
+  .modal-title{
+    font-family: 'Soulwave';
+    font-size: 80px;
+    padding-left: 30px;
+  }
+
+  /* kapcsolat */
+
+  .kapcsolat{
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .kapcsolat_blur{
+      background-color: rgba(0, 0, 0, 0.486);;
+  }
+
+  .kapcsolat_text{
+      font-family: 'Cormorant Garamond';
+      font-size: 20px;
+      color: whitesmoke;
+      padding-left: 40px;
+  }
+
+  .kapcsolat_box{
+    border-radius: 10px;
+    opacity: 1;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .1);
+    padding: 30px;
+    display: block;
+  }
+
+  .form-control{
+      width: 250px;
+  }
+
+  .rolunk{
+      font-family: 'Soulwave';
+      font-size: 30px;
+      color: whitesmoke;
+      padding-top: 30px;
+  }
+
+  .velemeny{
+      font-family: 'Cormorant Garamond';
+      font-size: 22px;
+      color: whitesmoke;
+      padding-left: 15px;
+      line-height: 22px;
+      margin-top: -10px;
+  }
+
+  .quote_top{
+      opacity: 0.3;
+      width: 110px;
+      position: absolute;
+      margin-top: -40px;
+  }
+
+  .quote_bottom{
+      opacity: 0.3;
+      width: 110px;
+      float: right;
+  }
+
+  @media only screen and (max-width: 800px) {
+
+    .bemutatkozas{
+        min-height: 50vh;
+        padding-bottom: 100px;
+    }
+
+    .mainlogo{
+        padding-top: 35vh;
+        width:100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .landing{
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-image: url(../assets/images/landing/landing_mobil.jpeg) !important;
+        overflow: hidden;
+    }
+
+    .display-1{
+        margin-left: 20px;
+    }
+
+    .display-2{
+        padding-top: 30px;
+        margin-left: -80px;
+    }
+
+    .extra_img img{
+        width: 50%;
+        margin: 20px;
+    }
+
+    .Sir_David{
+        display: none;
+    }
+
+
+    .btn-szoba{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .btn-szoba img{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .szobak_mobil{
+        display: block;
+        min-height: 100vh;
+    }
+    
+    .sirdavid_photo2_mobil{
+        width: 100%;
+    }
+    
+    .szobainfo_mobil{
+        margin: auto;
+        border-radius: 0% !important;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 15px !important;
+    }
+
+    .apartman_nev_mobil{
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    .apartman_nev2_mobil{
+        font-family: 'Soulwave';
+        font-size: 30px;
+        margin-top: -10px;
+    }
+
+    .table_mobil{
+        margin: 0px !important;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 13px;
+    }
+
+    .aprobetus_mobil{
+        font-size: 10px;
+        font-family: 'Cormorant Garamond', serif;
+        line-height: 3px;
+        margin-top: 3px;
+    }
+
+    .btn-kisfaludy{
+        display: none;
+    }
+
+    .btn-kisfaludy-mobil{
+        display: block;
+        font-family: 'Cormorant Garamond', serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        padding-top: 7px;
+        display: block;
+        color: rgb(255, 255, 255);
+        padding: 8px 16px;
+        text-decoration: none;
+        opacity: 1;
+    }
+
+
+/* Galeria img mobil */
+    .galeria{
+        width: 250px;
+        margin: 0;
+    }
+
+    .lake{
+        margin-left: 30px;
+        padding-top: 0px;
+        width: 300px;
+    }
+
+    .pajta{
+        width:210px;
+    }
+    
+    .road1{
+        display: none;
+    }
+    
+    .road2{
+        display: none;
+    }
+
+/* Galeria Mobil */
+
+    .column {
+        flex: 100%;
+        max-width: 100%;
+        padding: 0 12px;
+      }
+      
+      .column img {
+        margin-top: 24px;
+        vertical-align: middle;
+        width: 100%;
+      }
+    
+      .modal-title{
+        font-family: 'Soulwave';
+        font-size: 40px;
+      }
+  }
